@@ -19,6 +19,6 @@
     <project path="hardware/qcom-caf/sm8150/display" name="Kitsunejasutin/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-18.1-caf-sm8150" />
 
     <!-- Custom Repos -->
-    <remove-project name="frameworks_av" />
+    <remove-project name="AICP/frameworks_av" />
     <project path="frameworks_av" name="Kitsunejasutin/frameworks_av" remote="github" revision="r11.1" />
 </manifest>
