@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="aicp-gitlab"
+          fetch="https://gitlab.com/hermesconrad/vendor/"
+          revision="r11.1" />
+
+    <!-- Device tree -->
+    <project name="AICP/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="r11.1" />
+
+    <!-- Kernel trees -->
+    <project name="AICP/kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="r11.1" />
+
+    <!-- Vendor trees -->
+    <project name="proprietary_vendor_xiaomi" path="vendor/xiaomi/" remote="aicp-gitlab" />
+
+    <!-- Needed modified HALs -->
+    <remove-project name="LineageOS/android_hardware_qcom_display" />
+    <project path="hardware/qcom-caf/sm8150/display" name="Kitsunejasutin/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-18.1-caf-sm8150" />
+
+    <!-- Custom Repos -->
+    <remove-project name="frameworks_av" />
+    <project path="frameworks_av" name="Kitsunejasutin/frameworks_av" remote="github" revision="r11.1" />
+</manifest>
