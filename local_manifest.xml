@@ -20,5 +20,5 @@
 
     <!-- Custom Repos -->
     <remove-project name="AICP/frameworks_av" />
-    <project path="frameworks_av" name="Kitsunejasutin/frameworks_av" remote="github" revision="r11.1" />
+    <project path="frameworks/av" name="Kitsunejasutin/frameworks_av" remote="github" revision="r11.1" />
 </manifest>
