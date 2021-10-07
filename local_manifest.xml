@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!-- Device tree -->
-    <project name="Octavi-Devices/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="main" />
+    <project name="OctaviOS-Devices/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="main" />
 
     <!-- Kernel trees -->
-    <project name="Octavi-Devices/kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="main" />
+    <project name="OctaviOS-Devices/kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="main" />
     <project name="ThankYouMario/proprietary_vendor_qcom_sdclang" path="prebuilts/clang/host/linux-x86/clang-sdllvm" remote="github" revision="ruby-12" clone-depth="1" />
 
     <!-- Vendor trees -->
-    <project name="Octavi-Devices/vendor_xiaomi_ginkgo" path="vendor/xiaomi/ginkgo" remote="main" />
+    <project name="OctaviOS-Devices/vendor_xiaomi_ginkgo" path="vendor/xiaomi/ginkgo" remote="github" revision="main"/>
+    <project name="trinket-devs/vendor_miuicamera" path="vendor/miuicamera" remote="github" revision="11.0"/>
 
     <!-- Needed modified HALs -->
     <remove-project name="android_hardware_qcom_display" />
@@ -19,6 +20,8 @@
     <remove-project name="platform_vendor_qcom_opensource_interfaces" />
     <remove-project name="platform_packages_apps_Nfc" />
     <remove-project name="platform_hardware_qcom_audio" />
+    <remove-project name="platform_device_octavi_sepolicy" />
+    <remove-project name="platform/hardware/nxp/nfc" />
 
     <project path="hardware/qcom-caf/sm8150/audio" name="ArrowOS/android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="github" revision="arrow-11.0-caf-sm8150" />
     <project path="hardware/qcom-caf/sm8150/display" name="ArrowOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="arrow-11.0-caf-sm8150" />
@@ -36,4 +39,6 @@
     <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="LineageOS/android_vendor_nxp_opensource_hidlimpl" remote="github" revision="lineage-18.1-sn100x" /> />
     <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="LineageOS/android_vendor_nxp_opensource_external_libnfc-nci" remote="github" revision="lineage-18.1" />
 
+    <!-- Custom Repos -->
+    <project path="device/octavi/sepolicy" name="Kitsunejasutin/platform_device_octavi_sepolicy" remote="github" revision="11" />
 </manifest>
