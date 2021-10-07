@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <remote name="aicp-gitlab"
-          fetch="https://gitlab.com/hermesconrad/vendor/"
-          revision="r11.1" />
-
     <!-- Device tree -->
-    <project name="AICP/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="r11.1" />
+    <project name="Octavi-Devices/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="main" />
 
     <!-- Kernel trees -->
-    <project name="ArrowOS-Devices/android_kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="arrow-11.0" />
+    <project name="Octavi-Devices/kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="main" />
+    <project name="ThankYouMario/proprietary_vendor_qcom_sdclang" path="prebuilts/clang/host/linux-x86/clang-sdllvm" remote="github" revision="ruby-12" clone-depth="1" />
 
     <!-- Vendor trees -->
-    <project name="proprietary_vendor_xiaomi" path="vendor/xiaomi/" remote="aicp-gitlab" />
+    <project name="Octavi-Devices/vendor_xiaomi_ginkgo" path="vendor/xiaomi/ginkgo" remote="main" />
 
     <!-- Needed modified HALs -->
-    <remove-project name="LineageOS/android_hardware_qcom_display" />
-    <project path="hardware/qcom-caf/sm8150/display" name="Kitsunejasutin/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-18.1-caf-sm8150" />
+    <remove-project name="android_hardware_qcom_display" />
+    <remove-project name="android_hardware_qcom_audio" />
+    <remove-project name="android_hardware_qcom_media" />
+    <remove-project name="platform_vendor_qcom_opensource_power" />
+    <remove-project name="android_vendor_qcom_opensource_wfd-commonsys" />
+    <remove-project name="platform_vendor_qcom_opensource_interfaces" />
+    <remove-project name="platform_packages_apps_Nfc" />
+    <remove-project name="platform_hardware_qcom_audio" />
 
-    <!-- Custom Repos -->
-    <remove-project name="AICP/frameworks_av" />
-    <project path="frameworks/av" name="Kitsunejasutin/frameworks_av" remote="github" revision="r11.1" />
+    <project path="hardware/qcom-caf/sm8150/audio" name="ArrowOS/android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="github" revision="arrow-11.0-caf-sm8150" />
+    <project path="hardware/qcom-caf/sm8150/display" name="ArrowOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="arrow-11.0-caf-sm8150" />
+    <project path="hardware/qcom-caf/sm8150/media" name="ArrowOS/android_hardware_qcom_media" groups="qcom" remote="github" revision="arrow-11.0-caf-sm8150" />
+    <project path="vendor/qcom/opensource/power" name="ArrowOS/android_vendor_qcom_opensource_power" remote="github" revision="arrow-11.0" />
+    <project path="vendor/qcom/opensource/wfd-commonsys" name="Kitsunejasutin/android_vendor_qcom_opensource_wfd-commonsys" remote="github" revision="lineage-18.1" />
+    <project path="vendor/qcom/opensource/interfaces" name="ArrowOS/android_vendor_qcom_opensource_wfd-commonsys" remote="github" revision="arrow-11.0" />
+    <project path="hardware/broadcom/nfc" name="LineageOS/android_hardware_broadcom_nfc" remote="github" revision="lineage-18.1" />
+    <project path="hardware/nxp/nfc" name="LineageOS/android_hardware_nxp_nfc" remote="github" revision="lineage-18.1" />
+    <project path="packages/apps/Nfc" name="LineageOS/android_packages_apps_Nfc" remote="github" revision="lineage-18.1" />
+    <project path="vendor/nxp/opensource/interfaces/nfc" name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc" remote="github" revision="lineage-18.1" />
+    <project path="vendor/nxp/opensource/commonsys/frameworks" name="LineageOS/android_vendor_nxp_opensource_frameworks" remote="github" revision="lineage-18.1" />
+    <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc" remote="github" revision="lineage-18.1" />
+    <project path="vendor/nxp/opensource/sn100x/halimpl" name="LineageOS/android_vendor_nxp_opensource_halimpl" remote="github" revision="lineage-18.1-sn100x" />
+    <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="LineageOS/android_vendor_nxp_opensource_hidlimpl" remote="github" revision="lineage-18.1-sn100x" /> />
+    <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="LineageOS/android_vendor_nxp_opensource_external_libnfc-nci" remote="github" revision="lineage-18.1" />
+
 </manifest>
