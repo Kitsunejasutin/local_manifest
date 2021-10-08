@@ -28,7 +28,7 @@
     <project path="hardware/qcom-caf/sm8150/media" name="ArrowOS/android_hardware_qcom_media" groups="qcom" remote="github" revision="arrow-11.0-caf-sm8150" />
     <project path="vendor/qcom/opensource/power" name="ArrowOS/android_vendor_qcom_opensource_power" remote="github" revision="arrow-11.0" />
     <project path="vendor/qcom/opensource/wfd-commonsys" name="Kitsunejasutin/android_vendor_qcom_opensource_wfd-commonsys" remote="github" revision="lineage-18.1" />
-    <project path="vendor/qcom/opensource/interfaces" name="ArrowOS/android_vendor_qcom_opensource_wfd-commonsys" remote="github" revision="arrow-11.0" />
+    <project path="vendor/qcom/opensource/interfaces" name="ArrowOS/android_vendor_qcom_opensource_interfaces" remote="github" revision="arrow-11.0" />
     <project path="hardware/broadcom/nfc" name="LineageOS/android_hardware_broadcom_nfc" remote="github" revision="lineage-18.1" />
     <project path="hardware/nxp/nfc" name="LineageOS/android_hardware_nxp_nfc" remote="github" revision="lineage-18.1" />
     <project path="packages/apps/Nfc" name="LineageOS/android_packages_apps_Nfc" remote="github" revision="lineage-18.1" />
