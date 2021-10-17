@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="aicp-gitlab"
-          fetch="https://gitlab.com/hermesconrad/vendor/"
-          revision="r11.1" />
+  <!-- Device tree -->
+  <project name="OctaviOS-Devices/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="12" />
 
-    <!-- Device tree -->
-    <project name="AICP/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="r11.1" />
+  <!-- Kernel trees -->
+  <project name="OctaviOS-Devices/kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="11" />
 
-    <!-- Kernel trees -->
-    <project name="ArrowOS-Devices/android_kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="arrow-11.0" />
+  <!-- Vendor trees -->
+  <project name="OctaviOS-Devices/vendor_xiaomi_ginkgo" path="vendor/xiaomi/ginkgo/" remote="github" revision="12" />
 
-    <!-- Vendor trees -->
-    <project name="proprietary_vendor_xiaomi" path="vendor/xiaomi/" remote="aicp-gitlab" />
-
-    <!-- Needed modified HALs -->
-    <remove-project name="LineageOS/android_hardware_qcom_display" />
-    <project path="hardware/qcom-caf/sm8150/display" name="Kitsunejasutin/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-18.1-caf-sm8150" />
-
-    <!-- Custom Repos -->
-    <remove-project name="AICP/frameworks_av" />
-    <project path="frameworks/av" name="Kitsunejasutin/frameworks_av" remote="github" revision="r11.1" />
+  <!-- Custom Repos -->
+  <remove-project name="platform_hardware_libhardware" />
+  <remove-project name="platform_external_tinycompress" />
+  <remove-project name="platform_external_selinux" />
+  <remove-project name="LineageOS/android_hardware_qcom_display" />
+  <remove-project name="LineageOS/android_hardware_qcom_audio" />
+  <remove-project name="LineageOS/android_hardware_qcom_media" />
+  <project path="hardware/libhardware" name="yukiscape/hardware_libhardware" groups="pdk" revision="12" remote="github" />
+  <project path="external/tinycompress" name="yukiscape/platform_external_tinycompress" groups="pdk" revision="s" remote="github" />
+  <project path="external/selinux" name="yukiscape/external_selinux" groups="pdk" revision="12" remote="github" />
+  <project path="hardware/qcom-caf/sm8150/display" name="yukiscape/platform_hardware_qcom-caf_sm8150_display" groups="pdk-qcom,qcom,qcom_display" revision="android-12" remote="github" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="aosp-stuff/platform_hardware_qcom-caf_sm8150_audio" groups="qcom,qcom_audio,pdk-qcom" revision="android-11" remote="github" />
+  <project path="hardware/qcom-caf/sm8150/media" name="aosp-stuff/platform_hardware_qcom-caf_sm8150_media" groups="qcom,pdk-qcom" revision="android-11" remote="github" />
+  <project path="device/qcom/sepolicy/vndr" name="yukiscape/device_qcom_sepolicy_vndr" revision="android-12" remote="github" />
 </manifest>
