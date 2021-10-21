@@ -5,23 +5,17 @@
   <project name="OctaviOS-Devices/device_xiaomi_ginkgo" path="device/xiaomi/ginkgo" remote="github" revision="12" />
 
   <!-- Kernel trees -->
-  <project name="OctaviOS-Devices/kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="11" />
+  <project name="OctaviOS-Devices/kernel_xiaomi_ginkgo" path="kernel/xiaomi/ginkgo" remote="github" revision="main" />
 
   <!-- Vendor trees -->
   <project name="OctaviOS-Devices/vendor_xiaomi_ginkgo" path="vendor/xiaomi/ginkgo/" remote="github" revision="12" />
 
   <!-- Custom Repos -->
-  <remove-project name="platform_hardware_libhardware" />
-  <remove-project name="platform_external_tinycompress" />
-  <remove-project name="platform_external_selinux" />
   <remove-project name="LineageOS/android_hardware_qcom_display" />
   <remove-project name="LineageOS/android_hardware_qcom_audio" />
   <remove-project name="LineageOS/android_hardware_qcom_media" />
-  <project path="hardware/libhardware" name="yukiscape/hardware_libhardware" groups="pdk" revision="12" remote="github" />
-  <project path="external/tinycompress" name="yukiscape/platform_external_tinycompress" groups="pdk" revision="s" remote="github" />
-  <project path="external/selinux" name="yukiscape/external_selinux" groups="pdk" revision="12" remote="github" />
   <project path="hardware/qcom-caf/sm8150/display" name="yukiscape/platform_hardware_qcom-caf_sm8150_display" groups="pdk-qcom,qcom,qcom_display" revision="android-12" remote="github" />
   <project path="hardware/qcom-caf/sm8150/audio" name="aosp-stuff/platform_hardware_qcom-caf_sm8150_audio" groups="qcom,qcom_audio,pdk-qcom" revision="android-11" remote="github" />
   <project path="hardware/qcom-caf/sm8150/media" name="aosp-stuff/platform_hardware_qcom-caf_sm8150_media" groups="qcom,pdk-qcom" revision="android-11" remote="github" />
-  <project path="device/qcom/sepolicy/vndr" name="yukiscape/device_qcom_sepolicy_vndr" revision="android-12" remote="github" />
+  <project path="device/qcom/sepolicy_vndr" name="Kitsunejasutin/device_qcom_sepolicy_vndr" revision="twelve" remote="github" />
 </manifest>
