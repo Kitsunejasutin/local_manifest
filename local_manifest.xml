@@ -20,6 +20,10 @@
   <remove-project name="LineageOS/android_vendor_nxp_opensource_halimpl" />
   <remove-project name="LineageOS/android_vendor_nxp_opensource_hidlimpl" />
   <remove-project name="LineageOS/android_hardware_qcom-caf_common" />
+  <remove-project name="platform_device_octavi_sepolicy" />
+  <remove-project name="platform_device_qcom_sepolicy" />
+  <remove-project name="platform_device_qcom_sepolicy_vndr" />
+  <remove-project name="platform_system_sepolicy" />
   <project path="hardware/qcom-caf/sm8150/display" name="ArrowOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="arrow-12.0-caf-sm8150" remote="github" />
   <project path="hardware/qcom-caf/sm8150/audio" name="ArrowOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="arrow-12.0-caf-sm8150" remote="github" />
   <project path="hardware/qcom-caf/sm8150/media" name="ArrowOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="arrow-12.0-caf-sm8150" remote="github" />
@@ -33,7 +37,7 @@
   <project path="vendor/nxp/opensource/pn5xx/halimpl" name="ArrowOS/android_vendor_nxp_opensource_halimpl" remote="github" revision="arrow-12.0-pn5xx" />
   <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="ArrowOS/android_vendor_nxp_opensource_hidlimpl" remote="github" revision="arrow-12.0-pn5xx" />
   <!-- hardware repos -->
-  <project path="hardware/qcom-caf/common" name="ArrowOS/android_hardware_qcom-caf_common" remote="github" >
+  <project path="hardware/qcom-caf/common" name="ArrowOS/android_hardware_qcom-caf_common" remote="github" revision="arrow-12.0">
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- for AOSP sdm845 and sm8150, we override os_pickup.mk -->
@@ -59,4 +63,8 @@
     <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
   </project>
+  <project path="device/octavi/sepolicy" name="Kitsunejasutin/device_spark_sepolicy" remote="github" revision="spark" />
+  <project path="device/qcom/sepolicy_vndr" name="Kitsunejasutin/device_qcom_sepolicy_vndr" remote="github" revision="spark" />
+  <project path="system/sepolicy" name="Kitsunejasutin/system_sepolicy" remote="github" revision="spark" />
+  <project path="device/qcom/sepolicy" name="Kitsunejasutin/device_qcom_sepolicy" remote="github" revision="spark" />
 </manifest>
