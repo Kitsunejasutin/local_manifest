@@ -66,5 +66,5 @@
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
   </project>
   
-  <project path="system/sepolicy" name="Kitsunejasutin/system_sepolicy" remote="github" revision="12" />
+  <project path="system/sepolicy" name="Kitsunejasutin/platform_system_sepolicy" remote="github" revision="12" />
 </manifest>
