@@ -23,6 +23,7 @@
   <remove-project name="LineageOS/android_vendor_nxp_opensource_halimpl" />
   <remove-project name="LineageOS/android_vendor_nxp_opensource_hidlimpl" />
   <remove-project name="LineageOS/android_hardware_qcom-caf_common" />
+  <remove-project name="platform_system_sepolicy" />
   <project path="hardware/qcom-caf/sm8150/display" name="ArrowOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="arrow-12.0-caf-sm8150" remote="github" />
   <project path="hardware/qcom-caf/sm8150/audio" name="ArrowOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="arrow-12.0-caf-sm8150" remote="github" />
   <project path="hardware/qcom-caf/sm8150/media" name="ArrowOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="arrow-12.0-caf-sm8150" remote="github" />
@@ -64,4 +65,6 @@
     <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
   </project>
+  
+  <project path="system/sepolicy" name="Kitsunejasutin/system_sepolicy" remote="github" revision="12" />
 </manifest>
